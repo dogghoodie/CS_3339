@@ -1,4 +1,9 @@
 #include <iostream>
+#include <ctime>
+#include <vector>
+#include <iomanip>
+
+using namespace std;
 
 void bubbleSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++) {
@@ -13,15 +18,28 @@ void bubbleSort(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {10, 7, 9, 8, 5, 6, 4, 2, 1, 3};
+	
+	int arr[] = {10, 7, 9, 8, 5, 6, 4, 2, 1, 3};
     int n = sizeof(arr)/sizeof(arr[0]);
-    
+   
+	clock_t cStartTime = clock();
+
     bubbleSort(arr, n);
 
-    std::cout << "Sorted array: ";
-    for (int i = 0; i < n; i++)
-        std::cout << arr[i] << " ";
-    std::cout << std::endl;
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+	}	
+    cout << endl;
+	clock_t cEndTime = clock();
+
+	double cElapsedTime = static_cast<double>(cEndTime - cStartTime);
+	
+	cout << fixed << setprecision(5);
+	cout << "\nStart Time : " << static_cast<double>(cStartTime) / CLOCKS_PER_SEC << endl;
+	cout << "End Time : " << static_cast<double>(cEndTime) / CLOCKS_PER_SEC << endl;
+	cout << "Actual CPU Clock time : " << cElapsedTime / CLOCKS_PER_SEC << endl;
 
     return 0;
 }
