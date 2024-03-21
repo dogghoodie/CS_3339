@@ -1,3 +1,6 @@
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
+
 public class BubbleSort {
     void bubbleSort(int arr[]) {
         int n = arr.length;
@@ -13,9 +16,25 @@ public class BubbleSort {
     public static void main(String args[]) {
         BubbleSort ob = new BubbleSort();
         int arr[] = {10, 7, 9, 8, 5, 6, 4, 2, 1, 3};
-        ob.bubbleSort(arr);
+
+		ThreadMXBean bean = ManagementFactory.getThreadMXBean();
+		long cpu_start_time = bean.isCurrentThreadCpuTimeSupported() ?
+			bean.getCurrentThreadCpuTime() : 0L;
+
+		ob.bubbleSort(arr);
+	
+		long cpu_end_time = bean.isCurrentThreadCpuTimeSupported() ?
+			bean.getCurrentThreadCpuTime() : 0L;
+
+		long cpu_elapsed_time = cpu_end_time - cpu_start_time;	
+
         System.out.println("Sorted array");
-        for (int i=0; i < arr.length; i++)
+        for (int i=0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
-    }
-}
+    	}
+		
+		System.out.println(String.format("CPU Start Time : %.5f", cpu_start_time / 1_000_000_000.0));
+		System.out.println(String.format("CPU End Time : %.5f" , cpu_end_time / 1_000_000_000.0));
+		System.out.println(String.format("CPU Elapsed Time %.5f: ", cpu_elapsed_time / 1_000_000_000.0));
+	}
+}	
