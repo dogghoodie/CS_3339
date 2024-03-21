@@ -26,15 +26,18 @@ int main() {
 
     bubbleSort(arr, n);
 
-
-    cout << "Sorted array: ";
-    for (int i = 0; i < n; i++){
-        cout << arr[i] << " ";
-	}	
-    cout << endl;
 	clock_t cEndTime = clock();
 
 	double cElapsedTime = static_cast<double>(cEndTime - cStartTime);
+
+    cout << "Sorted array: [";
+    for (int i = 0; i < n; i++){
+		if (i < n-1) {
+		cout << arr[i] << " ";
+		} else {
+			cout << arr[i] << "]" << endl;
+		}
+	}	
 	
 	cout << fixed << setprecision(5);
 	cout << "\nStart Time : " << static_cast<double>(cStartTime) / CLOCKS_PER_SEC << endl;
