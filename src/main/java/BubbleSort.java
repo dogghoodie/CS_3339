@@ -28,13 +28,17 @@ public class BubbleSort {
 
 		long cpu_elapsed_time = cpu_end_time - cpu_start_time;	
 
-        System.out.println("Sorted array");
+        System.out.print("Sorted array : [");
         for (int i=0; i < arr.length; i++){
-            System.out.print(arr[i] + " ");
-    	}
+			if (i < arr.length - 1) {
+            System.out.print(arr[i] + ", ");
+			} else {
+				System.out.println(arr[i] + "]");
+    		}
+		}
 		
 		System.out.println(String.format("CPU Start Time : %.5f", cpu_start_time / 1_000_000_000.0));
 		System.out.println(String.format("CPU End Time : %.5f" , cpu_end_time / 1_000_000_000.0));
-		System.out.println(String.format("CPU Elapsed Time %.5f: ", cpu_elapsed_time / 1_000_000_000.0));
+		System.out.println(String.format("CPU Elapsed Time %.5f", cpu_elapsed_time / 1_000_000_000.0));
 	}
 }	
