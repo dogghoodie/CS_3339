@@ -30,7 +30,7 @@ int main() {
 
 	double cElapsedTime = static_cast<double>(cEndTime - cStartTime);
 
-    cout << "Sorted array: [";
+    cout << "Sorted array : [";
     for (int i = 0; i < n; i++){
 		if (i < n - 1) {
 		cout << arr[i] << ", ";
