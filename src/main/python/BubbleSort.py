@@ -18,7 +18,4 @@ cpu_end_time = time.process_time()
 cpu_elapsed_time = (cpu_end_time - cpu_start_time)
 
 print(f"Sorted array :", arr)
-#print(f"CPU Start Time : {cpu_start_time:.5f}")
-#print(f"CPU End Time : {cpu_end_time:.5f}")
 print(f"CPU Elapsed Time : {cpu_elapsed_time:.7f}")
-
