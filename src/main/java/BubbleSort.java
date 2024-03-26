@@ -37,8 +37,8 @@ public class BubbleSort {
     		}
 		}
 		
-		System.out.println(String.format("CPU Start Time : %.5f", cpu_start_time / 1_000_000_000.0));
-		System.out.println(String.format("CPU End Time : %.5f" , cpu_end_time / 1_000_000_000.0));
-		System.out.println(String.format("CPU Elapsed Time %.5f", cpu_elapsed_time / 1_000_000_000.0));
+//		System.out.println(String.format("CPU Start Time : %.5f", cpu_start_time / 1_000_000_000.0));
+//		System.out.println(String.format("CPU End Time : %.5f" , cpu_end_time / 1_000_000_000.0));
+		System.out.println(String.format("CPU Elapsed Time %.7f", cpu_elapsed_time / 1_000_000_000.0));
 	}
 }	

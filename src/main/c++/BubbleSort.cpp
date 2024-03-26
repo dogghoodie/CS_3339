@@ -39,9 +39,9 @@ int main() {
 		}
 	}	
 	
-	cout << fixed << setprecision(5);
-	cout << "CPU Start Time : " << static_cast<double>(cStartTime) / CLOCKS_PER_SEC << endl;
-	cout << "CPU End Time : " << static_cast<double>(cEndTime) / CLOCKS_PER_SEC << endl;
+	cout << fixed << setprecision(7);
+//	cout << "CPU Start Time : " << static_cast<double>(cStartTime) / CLOCKS_PER_SEC << endl;
+//	cout << "CPU End Time : " << static_cast<double>(cEndTime) / CLOCKS_PER_SEC << endl;
 	cout << "CPU Elapsed Time : " << cElapsedTime / CLOCKS_PER_SEC << endl;
 
     return 0;
