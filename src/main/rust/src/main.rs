@@ -30,6 +30,6 @@ fn main() {
     let cpu_elapsed_time = cpu_end_time.duration_since(cpu_start_time);
 
     println!("Sorted array : {:?}", arr);
-    println!("CPU Elapsed Time : {:.7}", cpu_elapsed_time.as_secs_f64());
-
+    print!("CPU Elapsed Time : {:.7}", cpu_elapsed_time.as_secs_f64());
+    println!(" seconds.");
 }

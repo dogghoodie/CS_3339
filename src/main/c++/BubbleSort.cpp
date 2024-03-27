@@ -40,7 +40,7 @@ int main() {
 	}	
 	
 	cout << fixed << setprecision(7);
-	cout << "CPU Elapsed Time : " << cElapsedTime / CLOCKS_PER_SEC << endl;
+	cout << "CPU Elapsed Time : " << cElapsedTime / CLOCKS_PER_SEC << " seconds." << endl;
 
     return 0;
 }

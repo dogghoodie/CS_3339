@@ -36,6 +36,7 @@ public class BubbleSort {
 				System.out.println(arr[i] + "]");
     		}
 		}
-		System.out.println(String.format("CPU Elapsed Time : %.7f", cpu_elapsed_time / 1_000_000_000.0));
+		System.out.print(String.format("\nCPU Elapsed Time : %.7f", cpu_elapsed_time / 1_000_000_000.0));
+		System.out.println(" seconds.");
 	}
 }	
